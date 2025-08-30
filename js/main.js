@@ -79,4 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Inicialización de SimpleLightbox para la galería de departamentos
+    const gallery = document.querySelector('.department-gallery .gallery-grid');
+    if (gallery) {
+        new SimpleLightbox('.department-gallery .gallery-grid a', {
+            captionDelay: 250,
+            animationSpeed: 250,
+            fadeSpeed: 300
+        });
+    }
 });
