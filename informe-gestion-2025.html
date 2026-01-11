@@ -25,6 +25,7 @@
             text-decoration: underline;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -959,6 +960,11 @@
                         </tfoot>
                     </table>
                 </div>
+                <!-- Chart: Atención General -->
+                <div class="chart-container"
+                    style="position: relative; height: 400px; width: 100%; max-width: 800px; margin: 2rem auto;">
+                    <canvas id="chartAtencionGeneral"></canvas>
+                </div>
             </section>
 
             <!-- Operaciones 2025 -->
@@ -1006,6 +1012,11 @@
                         </tfoot>
                     </table>
                 </div>
+                <!-- Chart: Operaciones -->
+                <div class="chart-container"
+                    style="position: relative; height: 400px; width: 100%; max-width: 800px; margin: 2rem auto;">
+                    <canvas id="chartOperaciones"></canvas>
+                </div>
             </section>
 
         </div>
@@ -1032,6 +1043,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/charts-2025.js"></script>
 </body>
 
 </html>
