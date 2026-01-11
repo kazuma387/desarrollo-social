@@ -12,10 +12,12 @@ body {
 
 /* Header */
 header {
-    background-color: #9a0000; /* Rojo oscuro */
+    background-color: #9a0000;
+    /* Rojo oscuro */
     color: white;
     padding: 0.5rem 0;
-    border-bottom: 5px solid #c00000; /* Rojo más claro */
+    border-bottom: 5px solid #c00000;
+    /* Rojo más claro */
     position: relative;
 }
 
@@ -39,7 +41,8 @@ header {
     font-weight: bold;
 }
 
-.title h2,h5 {
+.title h2,
+h5 {
     margin: 0;
     font-size: clamp(0.7rem, 3vw, 1.2rem);
     font-weight: normal;
@@ -47,14 +50,17 @@ header {
 
 /* Botón de Menú Hamburguesa */
 .menu-toggle {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 50%; /* Centrado vertical */
-    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
+    top: 50%;
+    /* Centrado vertical */
+    transform: translateY(-50%);
+    /* Ajuste fino para centrado vertical */
     right: 20px;
     z-index: 1001;
 }
@@ -70,7 +76,8 @@ header {
 
 /* Navegación */
 nav {
-    background-color: #c00000; /* Rojo más claro */
+    background-color: #c00000;
+    /* Rojo más claro */
 }
 
 nav ul {
@@ -90,7 +97,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #9a0000; /* Rojo oscuro */
+    background-color: #9a0000;
+    /* Rojo oscuro */
 }
 
 /* Dropdown */
@@ -103,7 +111,7 @@ nav ul li a:hover {
     position: absolute;
     background-color: #c00000;
     min-width: 220px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -121,7 +129,7 @@ main {
     margin: 0.8rem auto;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
 }
 
@@ -152,7 +160,8 @@ main {
     display: block;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -165,7 +174,7 @@ main {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .next {
@@ -173,8 +182,9 @@ main {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Galería de Departamentos */
@@ -202,11 +212,13 @@ footer {
 /* Responsividad */
 @media (max-width: 768px) {
     .header-container {
-        justify-content: center; /* Centra el título */
+        justify-content: center;
+        /* Centra el título */
         text-align: center;
         /* Se elimina flex-direction: column para mantener el flujo horizontal */
         /* Se elimina padding-bottom */
-        padding: 0 55px; /* Aumenta el padding para que el título no choque con los bordes/botones */
+        padding: 0 55px;
+        /* Aumenta el padding para que el título no choque con los bordes/botones */
     }
 
     .logo img {
@@ -214,21 +226,27 @@ footer {
     }
 
     .logo {
-        display: none; /* Ocultar el logo en pantallas pequeñas */
+        display: none;
+        /* Ocultar el logo en pantallas pequeñas */
     }
 
     .menu-toggle {
-        display: block; /* Se muestra en móvil */
+        display: block;
+        /* Se muestra en móvil */
     }
 
     .main-nav {
         display: none;
         width: 100%;
-        position: absolute; /* Posicionamiento absoluto para no afectar el layout */
-        top: 100%; /* Se posiciona justo debajo del header */
+        position: absolute;
+        /* Posicionamiento absoluto para no afectar el layout */
+        top: 100%;
+        /* Se posiciona justo debajo del header */
         left: 0;
-        background-color: #c00000; /* Mismo color que la barra de nav */
-        z-index: 999; /* Asegura que esté por encima del contenido */
+        background-color: #c00000;
+        /* Mismo color que la barra de nav */
+        z-index: 999;
+        /* Asegura que esté por encima del contenido */
     }
 
     .main-nav.active {
@@ -251,11 +269,13 @@ footer {
     }
 
     .dropdown:hover .dropdown-content {
-        display: none; /* Desactivar hover en móvil */
+        display: none;
+        /* Desactivar hover en móvil */
     }
 
     .dropdown.active .dropdown-content {
-        display: block; /* Mostrar con JS */
+        display: block;
+        /* Mostrar con JS */
     }
 }
 
@@ -265,14 +285,14 @@ footer {
     footer p {
         font-size: 0.8rem;
     }
-    
+
 }
 
 @media screen and (max-width: 493px) {
     footer p {
         font-size: 0.6rem;
     }
-    
+
 }
 
 /* Estilos para la página Sobre Nosotros */
@@ -288,13 +308,14 @@ footer {
 }
 
 .intro-image {
-    flex: 0 0 300px; /* No crece, no se encoge, base de 300px */
+    flex: 0 0 300px;
+    /* No crece, no se encoge, base de 300px */
 }
 
 .intro-image img {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-cards {
@@ -308,13 +329,13 @@ footer {
     background-color: #f9f9f9;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
@@ -331,7 +352,8 @@ footer {
 
     .intro-image {
         margin-top: 1.5rem;
-        flex-basis: auto; /* Restablecer la base del flex item */
+        flex-basis: auto;
+        /* Restablecer la base del flex item */
         width: 100%;
         max-width: 350px;
     }
@@ -340,19 +362,22 @@ footer {
 /* Estilos para las Biografías */
 .biography-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de igual tamaño */
     gap: 2rem;
-    align-items: stretch; /* Asegura que las tarjetas tengan la misma altura */
+    align-items: stretch;
+    /* Asegura que las tarjetas tengan la misma altura */
 }
 
 .biography-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* La tarjeta ocupa todo el espacio de su columna */
+    width: 100%;
+    /* La tarjeta ocupa todo el espacio de su columna */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -361,13 +386,15 @@ footer {
 
 .biography-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .biography-card img {
     width: 100%;
-    height: 300px; /* Altura fija para la imagen */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    height: 300px;
+    /* Altura fija para la imagen */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin deformarse */
 }
 
 .biography-text {
@@ -389,7 +416,8 @@ footer {
 /* Media Query para hacerla responsiva */
 @media (max-width: 768px) {
     .biography-container {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas pequeñas */
     }
 }
 
@@ -465,7 +493,7 @@ footer {
 .info-left img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .info-right {
@@ -495,13 +523,13 @@ footer {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
@@ -589,7 +617,8 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr; /* Forzar una sola columna */
+        grid-template-columns: 1fr;
+        /* Forzar una sola columna */
         gap: 1rem;
     }
 
@@ -616,9 +645,12 @@ footer {
 /* Layout para la página de Primera Combatiente */
 .activity-layout {
     display: flex;
-    flex-direction: column; /* Siempre en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    gap: 1.5rem; /* Espacio entre título, carrusel y descripción */
+    flex-direction: column;
+    /* Siempre en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    gap: 1.5rem;
+    /* Espacio entre título, carrusel y descripción */
     padding: 1rem 0;
 }
 
@@ -631,12 +663,14 @@ footer {
 
 .activity-layout p {
     text-align: center;
-    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    max-width: 800px;
+    /* Limita el ancho del texto para mejor legibilidad */
 }
 
 .activity-layout .carousel {
     width: 100%;
-    max-width: 800px; /* Limita el ancho del carrusel */
+    max-width: 800px;
+    /* Limita el ancho del carrusel */
 }
 
 /* Estilos para la galería con Lightbox en atencion-adulto-mayor.html */
@@ -655,7 +689,8 @@ footer {
 }
 
 .department-gallery .gallery-item {
-    text-decoration: none; /* Quitar subrayado de los enlaces */
+    text-decoration: none;
+    /* Quitar subrayado de los enlaces */
 }
 
 .department-gallery .gallery-item img {
@@ -685,6 +720,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     /* Esto ya está definido, pero lo aseguro por si acaso */
     .department-gallery .gallery-grid {
         grid-template-columns: 1fr;
@@ -773,7 +809,7 @@ footer {
     display: flex;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-bottom: 2rem;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -781,7 +817,7 @@ footer {
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .news-image {
@@ -845,5 +881,129 @@ footer {
     .news-image {
         flex: auto;
         height: 200px;
+    }
+}
+
+/* Estilos para Tablas de Informes */
+.report-section {
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    /* Permite scroll horizontal en móviles */
+}
+
+.report-section h3 {
+    color: #9a0000;
+    border-bottom: 2px solid #c00000;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    /* Removed global min-width to prevent overflow in small grid items */
+}
+
+/* Wrapper for tables that need horizontal scrolling */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    /* Optional: adds a subtle border to the scroll area */
+}
+
+/* Specific class for wide tables that MUST scroll */
+.report-table.wide-content {
+    min-width: 800px;
+    /* Force width only on complex tables */
+}
+
+
+.report-table th,
+.report-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    background-color: #9a0000;
+    color: white;
+    font-weight: bold;
+}
+
+.report-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.report-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para tarjetas de resumen (Ayudas Técnicas, etc) */
+/* Estilos para tarjetas de resumen (Ayudas Técnicas, etc) */
+.summary-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    flex: 1 1 250px;
+    /* Allow shrinking and growing, base 250px */
+    min-width: 250px;
+    border-top: 5px solid #c00000;
+}
+
+.summary-card h4 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.summary-card .number {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #9a0000;
+    margin: 1rem 0;
+}
+
+/* Responsive Grids for Reports */
+.report-grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.report-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .report-grid-2-col {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-cards {
+        gap: 1rem;
+    }
+
+    .summary-card {
+        padding: 1.5rem;
+        min-width: 100%;
+        /* Full width on mobile */
     }
 }
