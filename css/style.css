@@ -944,66 +944,94 @@ footer {
 
 /* Estilos para tarjetas de resumen (Ayudas Técnicas, etc) */
 /* Estilos para tarjetas de resumen (Ayudas Técnicas, etc) */
+/* Responsive Grids for Reports */
+.report-grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.report-grid-responsive {
+    display: grid;
+    /* Reduced min-width to allow fitting on smaller screens before wrapping */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Summary Cards Grid */
 .summary-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+    display: grid;
+    /* Reduced min-width significantly to prevent overflow on very small screens */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
 }
 
 .summary-card {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
-    flex: 1 1 250px;
-    /* Allow shrinking and growing, base 250px */
-    min-width: 250px;
     border-top: 5px solid #c00000;
+    /* Removed flex properties in favor of grid */
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensure content doesn't force width */
+    overflow-wrap: break-word;
 }
 
 .summary-card h4 {
     margin-top: 0;
     color: #555;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .summary-card .number {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #9a0000;
-    margin: 1rem 0;
-}
-
-/* Responsive Grids for Reports */
-.report-grid-2-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.report-grid-responsive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
-    .report-grid-2-col {
+
+    .report-grid-2-col,
+    .report-grid-responsive,
+    .summary-cards {
+        gap: 1rem;
+        /* Force single column layout on mobile to ensure full width usage */
         grid-template-columns: 1fr;
     }
 
-    .summary-cards {
-        gap: 1rem;
+    .summary-card {
+        padding: 1rem;
     }
 
-    .summary-card {
-        padding: 1.5rem;
-        min-width: 100%;
-        /* Full width on mobile */
+    /* Scale down table fonts on mobile */
+    .report-table th,
+    .report-table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .report-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further reduction for very small screens */
+    .report-table th,
+    .report-table td {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    .summary-card .number {
+        font-size: 2rem;
     }
 }

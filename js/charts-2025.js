@@ -1,11 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to determine legend position based on screen width
+    function getLegendPosition() {
+        return window.innerWidth < 768 ? 'bottom' : 'right';
+    }
+
     // Common Chart Options for Professional Look
     const commonOptions = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: 'right',
+                position: getLegendPosition(),
                 labels: {
                     font: {
                         family: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
@@ -32,19 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Chart 1: Atención General de la Gestión
     const ctxAtencion = document.getElementById('chartAtencionGeneral').getContext('2d');
-    new Chart(ctxAtencion, {
+    const chartAtencion = new Chart(ctxAtencion, {
         type: 'pie',
         data: {
             labels: [
-                'Actualizaciones', 
-                'Cita Saime', 
-                'Registro Círculos de Abuelos', 
-                'Registro Adulto Mayor', 
-                'Recuperación de Contraseña', 
-                'Amor Mayor', 
-                'Registro Carnet de la Patria', 
-                'Registro de Abuelos', 
-                'Combustible', 
+                'Actualizaciones',
+                'Cita Saime',
+                'Registro Círculos de Abuelos',
+                'Registro Adulto Mayor',
+                'Recuperación de Contraseña',
+                'Amor Mayor',
+                'Registro Carnet de la Patria',
+                'Registro de Abuelos',
+                'Combustible',
                 'Otros (Milicia, Discapacidad, etc.)'
             ],
             datasets: [{
@@ -86,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Chart 2: Operaciones 2025
     const ctxOperaciones = document.getElementById('chartOperaciones').getContext('2d');
-    new Chart(ctxOperaciones, {
+    const chartOperaciones = new Chart(ctxOperaciones, {
         type: 'doughnut', // Doughnut for variety and professional look
         data: {
             labels: ['Hernia', 'Lipomas', 'Vesícula', 'Corte de trompas', 'Oftalmología', 'Histerectomía'],
@@ -120,6 +125,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }
+        }
+    });
+
+    // Handle resize to update legend position
+    window.addEventListener('resize', function () {
+        const newPosition = getLegendPosition();
+
+        if (chartAtencion.options.plugins.legend.position !== newPosition) {
+            chartAtencion.options.plugins.legend.position = newPosition;
+            chartAtencion.update();
+        }
+
+        if (chartOperaciones.options.plugins.legend.position !== newPosition) {
+            chartOperaciones.options.plugins.legend.position = newPosition;
+            chartOperaciones.update();
         }
     });
 });
